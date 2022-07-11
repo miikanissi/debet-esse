@@ -1,0 +1,14 @@
+<footer id="footer">
+    <hr />
+    {{- if isset .Params "date" }}
+    {{ if eq .Lastmod .Date }}
+    <time>{{ .Date | time.Format (i18n "post.created") }}</time>
+    <span>by {{ .Site.Params.author }}.</span>
+    {{ else }}
+    <time>{{ .Date | time.Format (i18n "post.created") }} {{ .Lastmod | time.Format (i18n "post.updated") }}</time>
+    <span>by {{ .Site.Params.author }}.</span>
+    {{ end }}
+    <br />
+    {{- end -}}
+    {{ .Site.Params.copyright }}
+</footer>

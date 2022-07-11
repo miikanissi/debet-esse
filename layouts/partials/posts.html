@@ -1,0 +1,11 @@
+<h3>{{ i18n "posts.title" }}</h3>
+<ul id="posts-list">
+    {{- range where site.RegularPages "Type" "in" site.Params.mainSections }}
+    <li>
+        <time>{{ .Date | time.Format (i18n "posts.date") }}</time> -
+        <a href="{{ .Permalink }}">
+            {{ .Title }}
+        </a>
+    </li>
+    {{- end }}
+</ul>

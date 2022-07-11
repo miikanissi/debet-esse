@@ -1,0 +1,15 @@
+[posts]
+
+[posts.title]
+other = "Blog Posts"
+
+[posts.date]
+other = "Jan 2, 2006"
+
+[post]
+
+[post.created]
+other = "Posted on January 2, 2006"
+
+[post.updated]
+other = "Updated on January 2, 2006"

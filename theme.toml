@@ -1,0 +1,16 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "Debet Esse"
+license = "GPL-3.0-only"
+licenselink = "https://github.com/miikanissi/debet-esse/blob/master/LICENSE"
+description = "A minimal, responsive Hugo theme for personal websites."
+homepage = "https://github.com/miikanissi/debet-esse"
+demosite = "https://miikanissi.com"
+tags = ["blog", "personal", "minimal", "responsive", "light", "dark"]
+features = [ "fast", "blog", "syntax highlighting" ]
+min_version = "0.41.0"
+
+[author]
+  name = "Miika Nissi"
+  homepage = "https://miikanissi.com"

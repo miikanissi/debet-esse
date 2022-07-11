@@ -1,0 +1,42 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{ if .IsHome }}
+    <meta name="description" content="{{ .Site.Params.description }}">
+    <meta name="author" content="{{ .Site.Params.author }}">
+    {{ else }}
+    {{- if isset .Params "description" }}
+    <meta name="description" content="{{ .Description }}">
+    {{ else }}
+    <meta name="description" content="{{ .Site.Params.description }}">
+    {{ end }}
+    <meta name="author" content="{{ .Site.Params.author }}">
+    {{ end }}
+    {{ printf `
+    <link rel="canonical" href="%s" />` .Permalink | safeHTML }}
+    {{ printf `
+    <link rel="shortcut icon" href="%s">` ("favicon.ico" | absURL) | safeHTML }}
+    {{ with .OutputFormats.Get "rss" -}}
+    {{ printf `
+    <link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+
+    {{ $resources := slice -}}
+
+    {{ $resources = $resources | append (resources.Get "css/main.css") -}}
+
+    {{ $dark := .Site.Params.dark | default "auto" -}}
+    {{ if not (eq $dark "off") -}}
+    {{ $resources = $resources | append (resources.Get "css/color.css" | resources.ExecuteAsTemplate "color.css" .) -}}
+    {{ end -}}
+
+    {{ if .Site.Params.highlight -}}
+    {{ $resources = $resources | append (resources.Get "css/syntax.css") -}}
+    {{ end -}}
+
+    {{ $css := $resources | resources.Concat "css/style.css" | minify }}
+    {{ printf `
+    <link rel="stylesheet" href="%s">` $css.RelPermalink | safeHTML }}
+
+    <title>{{ .Title }}</title>
+</head>
