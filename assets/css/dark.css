@@ -29,6 +29,10 @@ main#content a:visited {
 main#content header#post-header div {
     color: #a7a7a7;
 }
+pre.chroma:before {
+  background-color: #282828;
+  border: 1px solid #ebdbb2;
+}
 {{- if not (eq .Site.Params.dark "on") -}}
 }
 {{- end -}}

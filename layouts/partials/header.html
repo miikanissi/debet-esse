@@ -7,7 +7,7 @@
         <ul>
             {{ range .Site.Menus.main.ByWeight -}}
             <li>
-                {{ .Pre }}<a href="{{ .URL }}" title="{{ .Title }}">{{- .Name -}}</a>{{ .Post }}
+                {{ .Pre }}<a href="{{ .URL }}" title="{{ .Title }}"{{ if strings.HasPrefix .URL "http" }} target="_blank" rel="noopener"{{ end }}>{{- .Name -}}</a>{{ .Post }}
             </li>
             {{- end }}
         </ul>

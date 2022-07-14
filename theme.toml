@@ -8,7 +8,7 @@ description = "A minimal, responsive Hugo theme for personal websites."
 homepage = "https://github.com/miikanissi/debet-esse"
 demosite = "https://miikanissi.com"
 tags = ["blog", "personal", "minimal", "responsive", "light", "dark"]
-features = [ "fast", "blog", "syntax highlighting" ]
+features = [ "fast", "blog", "syntax highlighting", "dark", "light" ]
 min_version = "0.41.0"
 
 [author]

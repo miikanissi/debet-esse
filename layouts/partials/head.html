@@ -27,11 +27,14 @@
 
     {{ $dark := .Site.Params.dark | default "auto" -}}
     {{ if not (eq $dark "off") -}}
-    {{ $resources = $resources | append (resources.Get "css/color.css" | resources.ExecuteAsTemplate "color.css" .) -}}
+    {{ $resources = $resources | append (resources.Get "css/dark.css" | resources.ExecuteAsTemplate "dark.css" .) -}}
     {{ end -}}
 
     {{ if .Site.Params.highlight -}}
     {{ $resources = $resources | append (resources.Get "css/syntax.css") -}}
+    {{ if not (eq $dark "off") -}}
+    {{ $resources = $resources | append (resources.Get "css/syntax-dark.css" | resources.ExecuteAsTemplate "syntax-dark.css" .) -}}
+    {{ end -}}
     {{ end -}}
 
     {{ $css := $resources | resources.Concat "css/style.css" | minify }}
