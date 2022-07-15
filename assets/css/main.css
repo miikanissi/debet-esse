@@ -83,6 +83,16 @@ footer#footer {
   text-align: right;
   color: #928374;
 }
+footer#footer a {
+  color: #928374;
+  text-decoration: none;
+}
+footer#footer a:hover {
+  text-decoration: underline;
+}
+footer#footer a:visited {
+  color: #928374;
+}
 pre {
   border: 1px solid #928374;
   padding: 8pt;
