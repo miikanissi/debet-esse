@@ -7,7 +7,7 @@
     "url": "{{ .Site.BaseURL }}",
     "description": "{{ .Site.Params.description }}",
     "thumbnailUrl": "{{ .Site.Params.Logo | absURL }}",
-    "license": "{{ .Site.Params.Copyright }}"
+    "license": "{{ replace .Site.Params.Copyright "{year}" now.Year }}"
 }
 </script>
 {{ else if .IsPage }}
