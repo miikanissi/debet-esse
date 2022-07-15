@@ -22,7 +22,7 @@ the theme can be found at [https://miikanissi.com/](https://miikanissi.com/).
 To install `debet-esse`, download the repository into the `themes` folder in the root of
 your Hugo site.
 
-Existing git repository:
+With an existing git repository:
 
 ```
 git submodule add https://github.com/miikanissi/debet-esse.git themes/debet-esse
