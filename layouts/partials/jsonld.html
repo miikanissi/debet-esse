@@ -12,6 +12,7 @@
 </script>
 {{ else if .IsPage }}
 {{ $author :=  or (.Params.author) (.Site.Params.author) }}
+{{ $author_url :=  or (.Params.author.url) (.Site.BaseURL) }}
 {{ $org_name :=  .Site.Title }}
 <script type="application/ld+json">
 {
@@ -31,6 +32,7 @@
     "author" : {
         "@type": "Person",
         "name": "{{ $author }}"
+        "url": "{{ $author_url }}"
     },
     "creator" : {
         "@type": "Person",

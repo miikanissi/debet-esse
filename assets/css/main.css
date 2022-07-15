@@ -82,6 +82,7 @@ footer#footer {
   text-align: -webkit-right;
   text-align: right;
   color: #928374;
+  padding-bottom: 8px;
 }
 footer#footer a {
   color: #928374;
