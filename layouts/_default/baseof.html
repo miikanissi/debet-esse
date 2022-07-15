@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-{{ with.Site.Params.languageCode -}}
-<html lang="{{ . }}">
-{{ end }}
+<html lang="{{ .Site.LanguageCode }}">
     {{- partial "head.html" . -}}
     <body>
         {{- partial "header.html" . -}}
