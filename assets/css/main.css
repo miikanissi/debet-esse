@@ -71,6 +71,13 @@ main#content img {
 main#content figure {
   margin: auto;
 }
+main#content table {
+  table-layout: fixed;
+  width: 100%;
+}
+main#content table thead {
+  text-align: left;
+}
 footer#footer {
   text-align: -webkit-right;
   text-align: right;
