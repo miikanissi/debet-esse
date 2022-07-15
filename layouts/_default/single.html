@@ -2,6 +2,11 @@
 <article>
     <header id="post-header">
         <h1>{{ .Title }}</h1>
+        <div>
+            {{- if isset .Params "date" -}}
+            <em><time>{{ .Date | time.Format (i18n "post.created") }}</time></em>
+            {{- end -}}
+        </div>
     </header>
     {{- .Content -}}
 </article>

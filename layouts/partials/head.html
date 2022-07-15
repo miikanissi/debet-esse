@@ -4,11 +4,17 @@
     {{ if .IsHome }}
     <meta name="description" content="{{ .Site.Params.description }}">
     <meta name="author" content="{{ .Site.Params.author }}">
+    <title>{{ .Site.Params.title }}</title>
     {{ else }}
     {{- if isset .Params "description" }}
     <meta name="description" content="{{ .Description }}">
     {{ else }}
     <meta name="description" content="{{ .Site.Params.description }}">
+    {{ end }}
+    {{- if isset .Params "title" }}
+    <title>{{ .Title }}</title>
+    {{ else }}
+    <title>{{ .Site.Params.title }}</title>
     {{ end }}
     <meta name="author" content="{{ .Site.Params.author }}">
     {{ end }}
@@ -41,6 +47,5 @@
     {{ printf `
     <link rel="stylesheet" href="%s">` $css.RelPermalink | safeHTML }}
 
-    <title>{{ .Title }}</title>
     {{ partial "favicon.html" . }}
 </head>
