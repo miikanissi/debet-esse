@@ -1,7 +1,13 @@
 <header id="banner">
+    {{ if .IsHome }}
+    <h1 class="site-title">
+        {{ .Site.Title }} <small><em><a href="{{ .Site.BaseURL }}">({{ .Site.BaseURL }})</a></em></small>
+    </h1>
+    {{ else }}
     <h2 class="site-title">
         {{ .Site.Title }} <small><em><a href="{{ .Site.BaseURL }}">({{ .Site.BaseURL }})</a></em></small>
     </h2>
+    {{ end }}
     <hr />
     <nav>
         <ul>
