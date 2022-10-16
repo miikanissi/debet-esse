@@ -3,7 +3,7 @@
 <ul id="posts">
 {{- range .Pages }}
     <li>
-        <time>{{ .Date | time.Format (i18n "posts.date") }}</time> -
+        <time>{{ .Date | time.Format ":date_medium" }}</time> -
         <a href="{{ .Permalink }}">
             {{ .Title }}
         </a>

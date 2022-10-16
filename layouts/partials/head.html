@@ -19,7 +19,7 @@
     <meta name="author" content="{{ .Site.Params.author }}">
     {{ end }}
     {{ printf `
-    <link rel="canonical" href="%s" />` .Permalink | safeHTML }}
+    <link rel="canonical" href="%s">` .Permalink | safeHTML }}
     {{ printf `
     <link rel="shortcut icon" href="%s">` ("favicon.ico" | absURL) | safeHTML }}
     {{ with .OutputFormats.Get "rss" -}}

@@ -4,7 +4,7 @@
         <h1>{{ .Title }}</h1>
         <div>
             {{- if isset .Params "date" -}}
-            <em><time>{{ .Date | time.Format (i18n "post.created") }}</time></em>
+            <em><time>{{ .Date | time.Format ":date_long" }}</time></em>
             {{- end -}}
         </div>
     </header>

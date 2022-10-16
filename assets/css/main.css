@@ -18,6 +18,7 @@ body {
   padding: 0 16px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  word-break: break-word;
 }
 h1,
 h2,
@@ -38,7 +39,6 @@ header#banner h2,
 header#banner h1 {
   font-size: 34px;
   font-size: 3.4rem;
-  word-break: break-word;
   overflow: hidden;
   margin-block-start: 0.83em;
   margin-block-end: 0.83em;
@@ -92,10 +92,26 @@ main#content table thead {
   text-align: left;
 }
 footer#footer {
-  text-align: -webkit-right;
-  text-align: right;
   color: #928374;
   padding-bottom: 28px;
+}
+footer .footer {
+  width: 100%;
+  display: flex;
+}
+footer .footer-right {
+  text-align: -webkit-right;
+  text-align: right;
+  flex-basis: 90%;
+}
+footer .footer-left {
+  flex-basis: 10%;
+}
+footer .footer-left img {
+  max-width: 100%;
+}
+footer p {
+  margin: 0;
 }
 footer#footer a {
   color: #928374;

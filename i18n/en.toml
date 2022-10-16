@@ -3,13 +3,8 @@
 [posts.title]
 other = "Blog Posts"
 
-[posts.date]
-other = "Jan 2, 2006"
+[posts.posted_on]
+other = "Posted on"
 
-[post]
-
-[post.created]
-other = "Posted on January 2, 2006"
-
-[post.updated]
-other = "Updated on January 2, 2006"
+[posts.updated_on]
+other = "Updated on"

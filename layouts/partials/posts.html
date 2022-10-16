@@ -2,7 +2,7 @@
 <ul id="posts-list">
     {{- range where site.RegularPages "Type" "in" site.Params.mainSections }}
     <li>
-        <time>{{ .Date | time.Format (i18n "posts.date") }}</time> -
+        <time>{{ .Date | time.Format ":date_medium" }}</time> -
         <a href="{{ .Permalink }}">
             {{ .Title }}
         </a>
