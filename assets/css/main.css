@@ -36,8 +36,8 @@ header#banner em a {
 }
 header#banner h2,
 header#banner h1 {
-  font-size: 36px;
-  font-size: 3.6rem;
+  font-size: 34px;
+  font-size: 3.4rem;
   word-break: break-word;
   overflow: hidden;
   margin-block-start: 0.83em;
