@@ -1,3 +1,6 @@
+{{ if not (eq .Site.Params.dark "on") -}}
+@media (prefers-color-scheme: dark) {
+{{ end -}}
 /* Background */ .bg { color: #f8f8f2; background-color: #000000; }
 /* PreWrapper */ .chroma { color: #f8f8f2; background-color: #000000; }
 /* Other */ .chroma .x {  }
@@ -83,3 +86,6 @@
 /* GenericTraceback */ .chroma .gt {  }
 /* GenericUnderline */ .chroma .gl {  }
 /* TextWhitespace */ .chroma .w {  }
+{{- if not (eq .Site.Params.dark "on") -}}
+}
+{{- end -}}
