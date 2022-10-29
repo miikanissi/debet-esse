@@ -2,36 +2,50 @@
 @media (prefers-color-scheme: dark) {
 {{ end -}}
 html {
-    scrollbar-color: #7c6f64 #3c3836;
+    scrollbar-color: #bfbfbf #595959;
 }
 
 body {
-    color: #ebdbb2;
-    background: #282828;
+    color: #ffffff;
+    background: #000000;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
+header#banner em a {
+  color: #bfbfbf;
+}
 header#banner nav ul li a {
-    color: #83a598;
+    color: #2fafff;
 }
 header#banner nav ul li a:visited {
-    color: #d3869b;
+    color: #feacd0;
 }
 
 main#content a {
-    color: #83a598;
+    color: #2fafff;
 }
 main#content a:visited {
-    color: #d3869b;
+    color: #feacd0;
 }
 
 main#content header#post-header div {
-    color: #a7a7a7;
+    color: #bfbfbf;
+}
+footer#footer {
+  color: #bfbfbf;
+}
+footer#footer a {
+  color: #bfbfbf;
+}
+footer#footer a:visited {
+  color: #bfbfbf;
 }
 pre.chroma:before {
-  background-color: #282828;
-  border: 1px solid #ebdbb2;
+  background-color: #000000;
+  border: 1px solid #bfbfbf;
+}
+pre {
+  border: 1px solid #bfbfbf;
 }
 {{- if not (eq .Site.Params.dark "on") -}}
 }

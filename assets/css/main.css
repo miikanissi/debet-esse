@@ -12,8 +12,8 @@ body {
   font-size: 1.8rem;
   line-height: 1.5;
   margin: 0 auto;
-  color: #3c3836;
-  background-color: #fff;
+  color: #000000;
+  background-color: #ffffff;
   width: 100%;
   padding: 0 16px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
@@ -46,8 +46,11 @@ header#banner {
   margin: 25px 0;
 }
 header#banner em a {
-  color: #928374;
+  color: #595959;
   text-decoration: none;
+}
+header#banner em a:hover {
+  text-decoration: underline;
 }
 header#banner h2,
 header#banner h1 {
@@ -71,24 +74,24 @@ header#banner nav ul li {
   padding-right: 8px;
 }
 header#banner nav ul li a {
-  color: #076678;
+  color: #0031a9;
   text-decoration: none;
 }
 header#banner nav ul li a:visited {
-  color: #8f3f71;
+  color: #721045;
 }
 header#banner nav ul li a:hover {
   text-decoration: underline;
 }
 main#content a {
-  color: #076678;
+  color: #0031a9;
   text-decoration: none;
 }
 main#content a:hover {
   text-decoration: underline;
 }
 main#content a:visited {
-  color: #8f3f71;
+  color: #721045;
 }
 main#content img {
   max-width: 100%;
@@ -104,7 +107,7 @@ main#content table thead {
   text-align: left;
 }
 footer#footer {
-  color: #928374;
+  color: #595959;
   padding-bottom: 28px;
 }
 footer .footer {
@@ -126,17 +129,17 @@ footer p {
   margin: 0;
 }
 footer#footer a {
-  color: #928374;
+  color: #595959;
   text-decoration: none;
 }
 footer#footer a:hover {
   text-decoration: underline;
 }
 footer#footer a:visited {
-  color: #928374;
+  color: #595959;
 }
 pre {
-  border: 1px solid #928374;
+  border: 1px solid #595959;
   padding: 8pt;
   font-family: monospace;
   overflow: auto;
@@ -149,11 +152,11 @@ pre.chroma {
 pre.chroma:before {
   display: none;
   position: absolute;
-  background-color: #fbf1c7;
+  background-color: #ffffff;
   top: -10px;
   right: 10px;
   padding: 3px;
-  border: 1px solid #3c3836;
+  border: 1px solid #000000;
 }
 pre.chroma:hover:before {
   display: inline;
