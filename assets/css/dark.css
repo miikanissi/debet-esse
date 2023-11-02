@@ -2,7 +2,7 @@
 @media (prefers-color-scheme: dark) {
 {{ end -}}
 html {
-    scrollbar-color: #bfbfbf #595959;
+    scrollbar-color: #1e1e1e #989898;
 }
 
 body {
@@ -12,7 +12,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 header#banner em a {
-  color: #bfbfbf;
+  color: #989898;
 }
 header#banner nav ul li a {
     color: #2fafff;
@@ -29,23 +29,23 @@ main#content a:visited {
 }
 
 main#content header#post-header div {
-    color: #bfbfbf;
+    color: #989898;
 }
 footer#footer {
-  color: #bfbfbf;
+  color: #989898;
 }
 footer#footer a {
-  color: #bfbfbf;
+  color: #989898;
 }
 footer#footer a:visited {
-  color: #bfbfbf;
+  color: #989898;
 }
 pre.chroma:before {
   background-color: #000000;
-  border: 1px solid #bfbfbf;
+  border: 1px solid #989898;
 }
 pre {
-  border: 1px solid #bfbfbf;
+  border: 1px solid #989898;
 }
 {{- if not (eq .Site.Params.dark "on") -}}
 }
