@@ -18,8 +18,11 @@
     {{ end }}
     <meta name="author" content="{{ .Site.Params.author }}">
     {{ end }}
-    {{ printf `
-    <link rel="canonical" href="%s">` .Permalink | safeHTML }}
+    {{ with .Params.relcanonical }}
+    <link rel="canonical" href="{{ . | relLangURL }}" itemprop="url" />
+    {{ else -}}
+    <link rel="canonical" href="{{ .Permalink }}" itemprop="url" />
+    {{ end -}}
     {{ printf `
     <link rel="shortcut icon" href="%s">` ("favicon.ico" | absURL) | safeHTML }}
     {{ with .OutputFormats.Get "rss" -}}
